@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .articles-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) 2fr;
+            grid-template-rows: repeat(3, 100px);
+            /* grid-template-rows: repeat(2, 170px); */
+            grid-gap: 30px 18px;
+            
+       
+        }
+        .article{
+            border: 2px solid red;
+            background-color: rgb(87, 87, 87);
+           
+        }
+
+        .article-1 {
+            background-color: #ef3155;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+  }
+  .article-2 {
+   background-color: #fc46aa;
+    
+  /*  Article 2 takes up Rows 1 , 2, and 3 in Column 2.  */
+  /* grid-column: 2 / 3;
+  grid-row: 1 / 4; */
+
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 4;
+}
+
+.articles-container li{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    </style>
+</head>
+<body>
+    <ul class="articles-container">
+        <li class="article article-1">Article 1</li>
+        <li class="article article-2">Article 2</li>
+        <li class="article article-3">Article 3</li>
+        <li class="article article-4">Article 4</li>
+        <li class="article article-5">Article 5</li>
+      </ul>
+</body>
+</html>
